@@ -1,0 +1,27 @@
+body {
+	border: 2px black;
+}
+
+.player {
+	height: 60px;
+	width: 60px;
+	float: left;
+	clear: both;
+	padding-bottom: 5px;
+}
+
+.cards {
+	float: right;
+	font-size: 50px;
+}
+
+.cards#my-cards{
+	font-size: 70px;
+}
+
+.fishbowl {
+	vertical-align: bottom;
+	font-size: 50px;
+	padding-top: 275px;
+}
+
