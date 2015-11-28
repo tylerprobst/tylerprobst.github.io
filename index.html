@@ -3,6 +3,7 @@
 	<head>
 	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -12,34 +13,56 @@
 		    </div>
 		    <div>
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">LinkedIn</a></li>
-		        <li><a href="#">GitHub</a></li>
+		      	<li><a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/profile/view?id=AAIAABuHLKwBRN1Y3kwNIqyvudvUi-poGlvmdt0&trk=nav_responsive_tab_profile" target="
+		        	_blank"><span class="fa fa-linkedin"></span></a></li>
+		        <li><a class="btn btn-social-icon btn-github" href="https://github.com/tylerprobst" target="
+		        	_blank"><span class="fa fa-github"> GitHub</span></a></li>
 		        <li><a href="#"></a></li>
 		      </ul>
 		    </div>
 		  </div>
-		</nav> 
-		<h1>Tyler Probst</h1>
-
-		<p>I have experience in front-end web development with Javascript, jQuery, Bootstrap, Backbone.js, Underscore.js, CSS3, and HTML5.</p>
-		<p>I also have back-end experience in C++, Python, Ruby, Ruby on Rails and SQL.</p>
-		<p>I have worked closely with Amazon AWS and Heroku to deploy several applications and have experience with git and the terminal.</p>
-
-		<h2>Projects:</h2>
-
-		<h3>Photogrammatron</h3> 
-		<p>Photogrammatron is an in browser photo editor that allows you to do some basic photoshop functions as well as</p>
-		<p>apply some simple filters. I built this as a project to gain a better understanding of image manipulation and working with</p>
-		<p>the HTML5 canvas element. It takes avantage of Facebook Oauth and the Facebook API so the user can edit a photo and then</p>
-		<p>post that photo directly to their wall.</p>
-		<a href="http://glacial-harbor-3799.herokuapp.com/" target="blank" ><img src="/photog.jpg" height="500" width="1050"></a>
-
-		<h3>Craigslist Clone</h3>
-		<p>I decided to build a Craigslist styled application. It utilizes the Flask framework alongside with SQLAlchemy, Flask-mail,</p>
-		<p>and a mySQL database. It features handrolled CSRF protection and other security protocols to help keep the user protected.</p>
-		<a href="http://glacial-harbor-3799.herokuapp.com/" target="blank"><img src="/tylerslist.jpg" height="500" width="1050"></a>
-		<h3>Go Fish</h3>
-		<a href="/goFish/">Go Fish</a>
-		<h3>Social App</h3>
+		</nav>
+		<div class="container"> 
+			<div class="jumbotron">
+				<h1>Tyler Probst</h1>
+				<p>I have experience in front-end web development with Javascript, jQuery, Bootstrap, Backbone.js, Underscore.js, CSS3, and HTML5.</p>
+				<p>I also have back-end experience in Python, Ruby, Rails, C++ and SQL.</p>
+				<p>I have worked closely with Amazon AWS and Heroku to deploy several applications and have experience with git and the terminal.</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">	
+					<div class="well">
+						<h3><a href="http://glacial-harbor-3799.herokuapp.com/" target="blank">Photogrammatron</a></h3> 
+						<p>Photogrammatron is an in browser photo editor that allows you to do some basic photoshop functions as well as apply some simple filters. I built this as a project to gain a better understanding of image manipulation and working with the HTML5 canvas element. It takes avantage of Facebook Oauth and the Facebook API so the user can edit a photo and then post that photo directly to their wall.</p>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<a href="http://glacial-harbor-3799.herokuapp.com/" target="blank" ><img src="/photog.jpg" height="375" width="700"></a>
+				</div>
+			</div>
+		</br>
+			<div class="row">
+				<div class="col-md-8">
+					<a href="http://tylerslist.elasticbeanstalk.com" target="blank"><img src="/tylerslist.jpg" height="375" width="700"></a>
+				</div>
+				<div class="col-sm-4">
+					<div class="well">
+						<h3><a href="http://tylerslist.elasticbeanstalk.com" target="blank">Craigslist Clone</a></h3>
+						<p>I decided to build a Craigslist styled application. It utilizes the Flask framework alongside with SQLAlchemy, Flask-mail, and a mySQL database. It features handrolled CSRF protection and other security protocols to help keep the user protected.</p>
+					</div>	
+				</div>
+			</div>
+			<div class="col">
+				<div class="col-sm-4">
+				<h3>Go Fish</h3>
+				<a href="/goFish/">Go Fish</a>
+				</div>
+				<div class="col-sm-4">
+				<h3>Social App</h3>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>	
