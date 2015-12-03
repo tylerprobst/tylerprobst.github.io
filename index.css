@@ -1,7 +1,12 @@
 
 .projects h1{
 	text-align: center;
-	padding-top: 50px;
+	padding-top: 50px;	 
+}
+
+.projects {
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .project-drop {
@@ -12,12 +17,16 @@
 	padding-left: 30px;
 }
 
-/*.container {
-	position: fixed;
-	z-index: 1;
+p {
+	font-size: 22px;
 }
 
-.below-header {
+
+./*below-header {
+	background-image: url('topBack.jpg');
+}*/
+
+/*.below-header {
 	padding-top: 400px;
 	z-index: 100;
 	position: static;

@@ -11,18 +11,41 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</head>	
 	<body>
-		<div id="messages"></div>
-		<div id="instruction"></div>
-		<div class="player"><img src="goFish1.jpeg" class="player" player-idx="0"></div>
-			<div class="cards" id="my-cards"></div>
-		<div class="player"><img src="goFish2.jpeg" class="player" player-idx="1"></div>
-			<div class="cards" id="two-cards"></div>
-		<div class="player"><img src="goFish3.jpeg" class="player" player-idx="2"></div>
-			<div class="cards" id="three-cards"></div>
-		<div class="player"><img src="goFish4.jpeg" class="player" player-idx="3"></div>
-			<div class="cards" id="four-cards"></div>
-		<div class="fishbowl" id="fishbowl"></div>
-		<div id="game-log"></div>
+		<div class="jumbotron">
+			<div id="messages"></div>
+			<div id="instruction"></div>
+			<div class="fishbowl" id="fishbowl"></div>
+			<div id="game-log"></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-6">	
+				<div class="player"><img src="goFish1.jpeg" class="player" player-idx="0"></div>
+					<div class="cards" id="my-cards"></div>
+			</div>
+			<p> Books:<div class="col-sm-4" id="books"></div></p>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm-3">	
+				<div class="player"><img src="goFish2.jpeg" class="player" player-idx="1"></div>
+					<div class="cards" id="two-cards"></div>
+			</div>
+			<div class="col-sm-6">
+			</div>	
+			<div class="col-sm-3">
+				<div class="player"><img src="goFish3.jpeg" class="player" player-idx="2"></div>
+					<div class="cards" id="three-cards"></div>
+			</div>
+			<div class="col-sm-4">
+			</div>
+			<br>
+			<div class="col-sm-4">
+				<div class="player"><img src="goFish4.jpeg" class="player" player-idx="3"></div>
+					<div class="cards" id="four-cards"></div>
+			</div>
+
 		<button id="start" class="btn btn-success">Start!</button>
 	</body>
 </html>

@@ -3,8 +3,8 @@ body {
 }
 
 .player {
-	height: 60px;
-	width: 60px;
+	height: 100px;
+	width: 100px;
 	float: left;
 	clear: both;
 	padding-bottom: 5px;
@@ -16,12 +16,18 @@ body {
 }
 
 .cards#my-cards{
-	font-size: 70px;
+	font-size: 100px;
 }
 
 .fishbowl {
 	vertical-align: bottom;
 	font-size: 50px;
-	padding-top: 275px;
 }
 
+#messages, #instruction {
+	text-align: center;
+}
+
+#books {
+	font-size: 30px; 
+}

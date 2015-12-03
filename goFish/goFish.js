@@ -56,7 +56,7 @@ var goFish = (function () {
 		}
 		else {
 			this.render();
-			alert("Game OVER!");
+			message("Game OVER!");
 		}
 
 
@@ -174,7 +174,7 @@ var goFish = (function () {
 	Player.prototype.chooseCard = function (callback) {
 		var self = this;
 
-		message('player chosen');
+		message('Player Chosen');
 		instructions('Choose a card...');
 		document.addEventListener('click', callbackHelper);
 		
@@ -193,7 +193,7 @@ var goFish = (function () {
 			card     = this.turn.card, 
 			hand 	 = this.turn.otherPlayer.hand;
 
-		message('card chosen');
+		message('Card Chosen');
 		 
 		for (var i = hand.length - 1; i >= 0; i--) {
 			if (card.value === hand[i].value) {
@@ -230,7 +230,7 @@ var goFish = (function () {
 						}
 					}
 				}
-
+				document.getElementById('books').innerHTML += '<p>' + book + '</p>';
 				return book;
 			}
 		};
@@ -332,4 +332,13 @@ var goFish = (function () {
 		return players;
 		}
 
-})();
+})(); 
+
+document.addEventListener('DOMContentLoaded', function () {
+	var startButton = document.getElementById('start');
+	
+	startButton.addEventListener('click', function () {
+		goFish.start();
+		startButton.remove();
+	});
+});
