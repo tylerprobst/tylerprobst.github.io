@@ -2,15 +2,13 @@ $(document).ready(function() {
     
     $(window).scroll( function () {
         console.log($(window).scrollTop());
-        if ($(window).scrollTop() >= 471) {
-            $('#navbar').addClass('navbar navbar-fixed-top');
+        if ($(window).scrollTop() >= 751) {
             $('.projects').addClass('project-drop');
-            $('#control').addClass('navbar-right');
+            $('#navbar').addClass('navbar-right');
         }
-        if ($(window).scrollTop() < 471) {
-            $('#navbar').removeClass('navbar navbar-fixed-top');
+        if ($(window).scrollTop() < 754) {
             $('.projects').removeClass('project-drop');
-            $('#control').removeClass('navbar-right');
+            $('#navbar').removeClass('navbar-right');
         }
     });
 });

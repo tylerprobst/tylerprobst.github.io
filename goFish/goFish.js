@@ -156,7 +156,8 @@ var goFish = (function () {
 		function callbackHelper(event) {
 			if (event.target.matches('.player')) {
 				var index = self.game.currentPlayerIdx;
-				self.turn.otherPlayer = self.game.players[event.target.getAttribute('player-idx')];
+				self.turn.otherPlayerIdx = parseInt(event.target.getAttribute('player-idx')) + 1;
+				self.turn.otherPlayer = self.game.players[event.target.getAttribute('player-idx')]; //asked player
 				
 				// if (self.game.players[index] === self.turn.otherPlayer) {
 				// 	instructions('Please select a different player.');
@@ -178,11 +179,12 @@ var goFish = (function () {
 		instructions('Choose a card...');
 		document.addEventListener('click', callbackHelper);
 		
-		function callbackHelper(event) {   // is event a thing that is made by javascript?
+		function callbackHelper(event) {  
 			
 			if (event.target.matches('.my-card')) {
 				self.turn.card = self.hand[event.target.getAttribute('card-idx')];
 				callback();
+				gameLog('You asked player ' + self.turn.otherPlayerIdx + ' for ', self.turn.card);
 				document.removeEventListener('click', callbackHelper);
 			}
 		}
@@ -315,11 +317,13 @@ var goFish = (function () {
 		instruction.innerHTML = '<p>' + msg + '</p>';
 	}
 
-	// function gameLog(msg, askingPlayer, askedPlayer, card) {
-	// 	var gameLog = document.getElementById('game-log');
+	function gameLog(msg, card) {
+		var gameLog = document.getElementById('game-log'),
+			gameLogCard = document.getElementById('game-log-card');
 
-	// 	gameLog.innerHTML = '<p>Player' + askingPlayer +
-	// }
+		gameLog.innerHTML = msg;
+		gameLogCard.innerHTML = card;
+	}
 
 	function makePlayers(deck, game) {
 		var players = [];
