@@ -1,17 +1,7 @@
 
 //Make death metal gofish interface with looping death metal backround music **pinky**
 
-//HW: look into javascript and jquery!! learn about dom methods---->
-//HW: ---->(document methods "W3 schools or codecademy" look up on adding and removing listeners)
-
-//HW: who asked who for what! div for messages that will display(add to the innerHTML and then remove) most recent on top
-
-//hw: jQuery(read docs), look specifically for: animate, css, clone, *closest*, data, delegate, html, append, val, prepend, click(for programitcally clicking something)
-// use $ in front of jQuery objects
-//add a ul tag for books 
-//add start button
 //make it to where players cannot select themselves
-//add better organization and better avatars 
 //find a way to make an actual pile of cards in the middle instead of them lined up so nicely
 
 
