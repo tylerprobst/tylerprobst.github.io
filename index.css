@@ -16,11 +16,29 @@
 	padding-top: 50px;
 }
 
+.project-title {
+	text-align: center;
+	cursor: pointer;
+	font-family: 'Impact', Charcoal, sans-serif;
+}
+
 .navbar-right {
 	position: fixed;
 	top: 0px;
 	width: 100%;
 	z-index: 99999999
+}
+
+.project-description {
+
+}
+
+.header-description {
+	font-family: "Courier New", Courier, monospace;
+}
+
+h3 {
+	font-size: 35px;
 }
 
 p {
