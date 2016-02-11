@@ -1,5 +1,25 @@
+.about-me {
+	position: fixed;
+	z-index: -1;
+}
+
 #email, #resume {
+	position: relative;
 	color: green;
+	top: 35px;
+	float: right;
+	padding-right: 50px;
+}
+
+#profile-pic {
+	position: relative;
+	top: -40px;
+	left: 50px;
+}
+
+#projects-header {
+	font-size: 55px;
+	font-family: 'Impact', Charcoal, sans-serif;
 }
 
 .projects h1{
@@ -22,6 +42,13 @@
 	font-family: 'Impact', Charcoal, sans-serif;
 }
 
+#name {
+	font-size: 75px;
+	padding-top: 75px;
+	padding-left: 250px;
+	font-family: 'Impact', Charcoal, sans-serif;	
+}
+
 .navbar-right {
 	position: fixed;
 	top: 0px;
@@ -37,6 +64,14 @@
 	font-family: "Courier New", Courier, monospace;
 }
 
+#web-dev {
+	position: relative;
+	font-size: 32px; 
+	top: 25px;
+	left: 120px;
+	font-family: "Courier New", Courier, monospace;	
+}
+
 h3 {
 	font-size: 35px;
 }
@@ -49,13 +84,9 @@ a {
 	color: green;
 }
 
-
-./*below-header {
-	background-image: url('topBack.jpg');
-}*/
-
-/*.below-header {
-	padding-top: 400px;
-	z-index: 100;
-	position: static;
-}*/
+.below-header {
+	top: 770px;
+	z-index: 999999;
+	position: relative;
+	background-color: white;
+}

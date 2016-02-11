@@ -10,17 +10,36 @@
 	  <script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
-		<div class="container"> 
-			<div class="jumbotron">
-				<div class="page-header">
-					<h1><img src="/tempProfilePic.jpeg" width="250px"> Tyler Probst <small>Web Developer</small></h1>
+		<div class="about-me">
+			<div class="container"> 
+				<div class="jumbotron">
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="page-header">
+								<img src="/tempProfilePic.jpeg" id="profile-pic" width="300px">
+							</div>
+						</div>
+						<div class="col-xs-8">
+							<h1 id="name"> Tyler Probst<p><small id="web-dev">Web Developer</small></p></h1>
+							<p><a id="email" href="mailto:tprobstcoding@gmail.com">tprobstcoding@gmail.com</a>
+							<br>
+							<a href="/Resume.pdf" target="blank" id="resume">Resume</a></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+						</div>
+						<div class="col-xs-8">
+						</div>
+					</div>
+					<div class="row">
+						<div clas="col-xs-12">
+							<p class="header-description">Front-end web development is my forte, my skills include, but are not limited to, Javascript, jQuery, Bootstrap, Backbone.js, Underscore.js, CSS3, and HTML5.</p>
+							<p class="header-description">Back-end development fascinates me, I have experience in Python, Ruby on Rails, C++ and SQL.</p>
+							<p class="header-description">Several of the applications you will find on this page are deployed using Amazon AWS and Heroku and all the projects I have contributed to use Git and Github for version control. <p>
+						</div>
+					</div>
 				</div>
-				<p><a id="email" href="mailto:tprobstcoding@gmail.com">tprobstcoding@gmail.com</a>
-				<br>
-				<a href="/Resume.pdf" target="blank" id="resume">Resume</a></p>
-				<p class="header-description">Front-end web development is my forte, my skills include, but are not limited to, Javascript, jQuery, Bootstrap, Backbone.js, Underscore.js, CSS3, and HTML5.</p>
-				<p class="header-description">Back-end development fascinates me, I have experience in Python, Ruby on Rails, C++ and SQL.</p>
-				<p class="header-description">Several of the applications you will find on this page are deployed using Amazon AWS and Heroku and all the projects I have contributed to use Git and Github for version control. <p>
 			</div>
 		</div>
 		<div class="below-header">
@@ -42,7 +61,7 @@
 			    </div>
 			</nav>
 			<div class="projects">
-				<h1>Projects</h1>
+				<h1 id="projects-header">Projects</h1>
 				<div class="row">
 					<div class="col-md-4">	
 						<div class="well">
@@ -57,7 +76,7 @@
 				</br>
 				<div class="row">
 					<div class="col-md-8">
-						<a href="http://tylerslist.elasticbeanstalk.com" target="blank"><img src="/tylerslist.jpg" height="375" width="700"></a>
+						<a href="http://tylerslist.elasticbeanstalk.com" target="blank"><img src="/tylerslist.jpg" height="445" width="800"></a>
 					</div>
 					<div class="col-sm-4">
 						<div class="well">
