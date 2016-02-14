@@ -1,6 +1,6 @@
 .about-me {
 	position: fixed;
-	z-index: -1;
+	z-index: 1;
 }
 
 #email, #resume {
@@ -54,10 +54,6 @@
 	top: 0px;
 	width: 100%;
 	z-index: 99999999
-}
-
-.project-description {
-
 }
 
 .header-description {
