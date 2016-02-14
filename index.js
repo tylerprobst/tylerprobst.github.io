@@ -1,7 +1,6 @@
 $(document).ready(function() {
     
     $(window).scroll( function () {
-        console.log($(window).scrollTop());
         if ($(window).scrollTop() >= 763) {
             $('.projects').addClass('project-drop');
             $('#navbar').addClass('navbar-right');
