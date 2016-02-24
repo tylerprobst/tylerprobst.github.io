@@ -12,6 +12,7 @@
 }
 
 #profile-pic {
+	border-radius: 15px;
 	position: relative;
 	top: -40px;
 	left: 50px;
