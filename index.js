@@ -1,5 +1,3 @@
-// look into promises (blue bird, promise)
-
 $(document).ready(function() {
 	var $headerContent   = $('#header-content'),
 		$headerCenter    = $('#header-center'),
@@ -24,7 +22,7 @@ $(document).ready(function() {
 		if ($projectPicRight.css('display') === 'block') {
 			$projectPicRight.fadeOut(1000, function () {
 					$projectPicLeft.fadeOut(1000, function () {
-					$projectPicLeft.children('img').attr('src', '/photog.jpg');
+					$projectPicLeft.children('a').children('img').attr('src', '/photog.jpg');
 					$headerTitle.attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 					$projectPicLeft.children('a').attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 					$projectPicLeft.fadeIn(1000);
@@ -34,7 +32,7 @@ $(document).ready(function() {
 		}
 		else {
 			$projectPicLeft.fadeOut(1000, function () {
-				$projectPicLeft.children('img').attr('src', '/photog.jpg');
+				$projectPicLeft.children('a').children('img').attr('src', '/photog.jpg');
 				$headerTitle.attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 				$projectPicLeft.children('a').attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 				$projectPicLeft.fadeIn(1000);
@@ -94,8 +92,8 @@ $(document).ready(function() {
 		if ($projectPicLeft.css('display') === 'block') {
 			$projectPicLeft.fadeOut(1000, function () {
 				$projectPicRight.fadeOut(1000, function () {
-					if ($projectPicRight.children('img').hasClass('chessPic')) {
-						$projectPicRight.children('img').removeClass('chessPic');
+					if ($projectPicRight.children('a').children('img').hasClass('chessPic')) {
+						$projectPicRight.children('a').children('img').removeClass('chessPic');
 					}
 					$projectPicRight.children('a').children('img').attr('src', '/goFishScreen.jpeg');
 					$headerTitle.attr('href', '/goFish/');
@@ -107,8 +105,8 @@ $(document).ready(function() {
 		}
 		else {
 			$projectPicRight.fadeOut(1000, function () {
-				if ($projectPicRight.children('img').hasClass('chessPic')) {
-					$projectPicRight.children('img').removeClass('chessPic');
+				if ($projectPicRight.children('a').children('img').hasClass('chessPic')) {
+					$projectPicRight.children('a').children('img').removeClass('chessPic');
 				}
 				$projectPicRight.children('a').children('img').attr('src', '/goFishScreen.jpeg');
 				$headerTitle.attr('href', '/goFish/');
@@ -192,4 +190,4 @@ function typeOver($el, string) {
 
 		return source;
 	}
-}	
+}
