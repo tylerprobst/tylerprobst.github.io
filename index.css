@@ -55,6 +55,10 @@ a, a:hover {
 	display: none;
 }
 
+#mobile-navbar {
+	display: none;
+}
+
 .project-div {
 	position: relative;
 	display: table-cell;
@@ -119,8 +123,13 @@ a, a:hover {
 .nav-bar-icon {
 	display: inline-block;
 	width: 13%;
+	/*font-size: 18px;*/
 	color: white;
-	font-size: 18px;
+   	padding: .5em;
+   	margin: .2em;
+   	background: linear-gradient(#a6a6a6, #737373);
+   	border: white solid;
+   	border-radius: .5em;
 }
 
 .nav-bar-icon:hover {
@@ -158,6 +167,26 @@ a, a:hover {
    #header-center { 
    		font-size: 3vw;
    		width: 75%; 
+   }
+
+   #mobile-navbar {
+   	display: table;
+   	width: 100%;
+   	font-size: 3em;
+   	padding: 1em;
+   }
+
+   .mobile-nav-bar-icon {
+   	color: white;
+   	padding: .5em;
+   	margin: .2em;
+   	background: linear-gradient(#a6a6a6, #737373);
+   	border: white solid;
+   	border-radius: .5em;
+   }
+
+   #navbar {
+   	display: none;
    }
 
    #resume, #email {

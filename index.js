@@ -16,7 +16,7 @@ $(document).ready(function() {
 		chessDescription           = $('#chess-description').text(),
 		chessTitle                 = $('#chess-title').text();
 
-	$('#photogrammatron').click(function () {	
+	$('.photogrammatron').on('click touch', function () {	
 		typeOver($headerContent, photogrammatronDescription);
 		typeOver($headerTitle, photogrammatronTitle);
 		if ($projectPicRight.css('display') === 'block') {
@@ -41,7 +41,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#tylerslist').click(function () {	
+	$('.tylerslist').on('click touch', function () {	
 		typeOver($headerContent, tylerslistDescription);
 		typeOver($headerTitle, tylerslistTitle);
 		if ($projectPicRight.css('display') === 'block') {
@@ -66,7 +66,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#home').click(function () {	
+	$('.home').on('click touch', function () {	
 		if ($projectPicLeft.css('display') === 'block') {
 			typeOver($headerContent, homeDescription);
 			typeOver($headerTitle, homeTitle);
@@ -85,7 +85,7 @@ $(document).ready(function() {
 		$headerTitle.attr('href', '');
 	})	
 
-	$('#gofish').click(function () {	
+	$('.gofish').on('click touch', function () {	
 		typeOver($headerContent, goFishDescription);
 		typeOver($headerTitle, goFishTitle);
 
@@ -117,7 +117,7 @@ $(document).ready(function() {
 		}
 	})
 
-	$('#chess').click(function () {	
+	$('.chess').on('click touch', function () {	
 		typeOver($headerContent, chessDescription);
 		typeOver($headerTitle, chessTitle);
 		if ($projectPicLeft.css('display') === 'block') {
