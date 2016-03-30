@@ -30,7 +30,7 @@ $(document).ready(function() {
 			$('.chess').animate({height: '100px'});
 			$('.tylerslist').animate({height: '100px'});
 			$headerCenter.animate({height: '0px'});
-			$('.photogrammatron').animate({height: '1250px'});
+			$('.photogrammatron').animate({height: '1050px'});
 		});	
 		$('.tylerslist').on('click touch', function () {
 			$('.gofish').animate({height: '100px'});
