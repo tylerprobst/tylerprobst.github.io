@@ -16,81 +16,134 @@ $(document).ready(function() {
 		chessDescription           = $('#chess-description').text(),
 		chessTitle                 = $('#chess-title').text();
 
-	$('.photogrammatron').on('click touch', function () {	
-		typeOver($headerContent, photogrammatronDescription);
-		typeOver($headerTitle, photogrammatronTitle);
-		if ($projectPicRight.css('display') === 'block') {
-			$projectPicRight.fadeOut(1000, function () {
-					$projectPicLeft.fadeOut(1000, function () {
+	//responsive
+	if ($('#mobile-navbar').css('display') === 'table') {
+		$('.home').on('click touch', function () {
+			$('.gofish').animate({height: '100px'});
+			$('.chess').animate({height: '100px'});
+			$('.tylerslist').animate({height: '100px'});
+			$('.photogrammatron').animate({height: '100px'});
+			$headerCenter.animate({height: '789px'});
+		})
+		$('.photogrammatron').on('click touch', function () {
+			$('.gofish').animate({height: '100px'});
+			$('.chess').animate({height: '100px'});
+			$('.tylerslist').animate({height: '100px'});
+			$headerCenter.animate({height: '0px'});
+			$('.photogrammatron').animate({height: '1250px'});
+		});	
+		$('.tylerslist').on('click touch', function () {
+			$('.gofish').animate({height: '100px'});
+			$('.photogrammatron').animate({height: '100px'});
+			$('.chess').animate({height: '100px'});
+			$headerCenter.animate({height: '0px'});
+			$('.tylerslist').animate({height: '850px'});
+		});	
+		$('.gofish').on('click touch', function () {
+			$('.chess').animate({height: '100px'});
+			$('.photogrammatron').animate({height: '100px'});
+			$('.tylerslist').animate({height: '100px'});
+			$headerCenter.animate({height: '0px'});
+			$('.gofish').animate({height: '1075px'});
+		});	
+		$('.chess').on('click touch', function () {
+			$('.gofish').animate({height: '100px'});
+			$('.photogrammatron').animate({height: '100px'});
+			$('.tylerslist').animate({height: '100px'});
+			$headerCenter.animate({height: '0px'});
+			$('.chess').animate({height: '950px'});
+		});
+	}
+	//full-screen
+	if ($('#mobile-navbar').css('display') === 'none') {
+		$('.photogrammatron').on('click', function () {	
+			typeOver($headerContent, photogrammatronDescription);
+			typeOver($headerTitle, photogrammatronTitle);
+			if ($projectPicRight.css('display') === 'block') {
+				$projectPicRight.fadeOut(1000, function () {
+						$projectPicLeft.fadeOut(1000, function () {
+						$projectPicLeft.children('a').children('img').attr('src', '/photog.jpg');
+						$headerTitle.attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
+						$projectPicLeft.children('a').attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
+						$projectPicLeft.fadeIn(1000);
+						$headerCenter.css('float', 'right');
+					});		
+				})
+			}
+			else {
+				$projectPicLeft.fadeOut(1000, function () {
 					$projectPicLeft.children('a').children('img').attr('src', '/photog.jpg');
 					$headerTitle.attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 					$projectPicLeft.children('a').attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
 					$projectPicLeft.fadeIn(1000);
 					$headerCenter.css('float', 'right');
-				});		
-			})
-		}
-		else {
-			$projectPicLeft.fadeOut(1000, function () {
-				$projectPicLeft.children('a').children('img').attr('src', '/photog.jpg');
-				$headerTitle.attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
-				$projectPicLeft.children('a').attr('href', 'http://glacial-harbor-3799.herokuapp.com/');
-				$projectPicLeft.fadeIn(1000);
-				$headerCenter.css('float', 'right');
-			});
-		}
-	})
+				});
+			}
+		})
 
-	$('.tylerslist').on('click touch', function () {	
-		typeOver($headerContent, tylerslistDescription);
-		typeOver($headerTitle, tylerslistTitle);
-		if ($projectPicRight.css('display') === 'block') {
-			$projectPicRight.fadeOut(1000, function () {
+		$('.tylerslist').on('click', function () {	
+			typeOver($headerContent, tylerslistDescription);
+			typeOver($headerTitle, tylerslistTitle);
+			if ($projectPicRight.css('display') === 'block') {
+				$projectPicRight.fadeOut(1000, function () {
+					$projectPicLeft.fadeOut(1000, function () {
+						$projectPicLeft.children('a').children('img').attr('src', '/tylerslist.jpg');
+						$headerTitle.attr('href', 'http://tylerslist.elasticbeanstalk.com');
+						$projectPicLeft.children('a').attr('href', 'http://tylerslist.elasticbeanstalk.com');
+						$projectPicLeft.fadeIn(1000);
+						$headerCenter.css('float', 'right');
+					});
+				})
+			}
+			else {
 				$projectPicLeft.fadeOut(1000, function () {
 					$projectPicLeft.children('a').children('img').attr('src', '/tylerslist.jpg');
 					$headerTitle.attr('href', 'http://tylerslist.elasticbeanstalk.com');
 					$projectPicLeft.children('a').attr('href', 'http://tylerslist.elasticbeanstalk.com');
 					$projectPicLeft.fadeIn(1000);
 					$headerCenter.css('float', 'right');
+				});	
+			}
+		})
+
+		$('.home').on('click', function () {	
+			if ($projectPicLeft.css('display') === 'block') {
+				typeOver($headerContent, homeDescription);
+				typeOver($headerTitle, homeTitle);
+				$projectPicLeft.fadeOut(1000, function () {
+					$headerCenter.css('float', '');
 				});
-			})
-		}
-		else {
-			$projectPicLeft.fadeOut(1000, function () {
-				$projectPicLeft.children('a').children('img').attr('src', '/tylerslist.jpg');
-				$headerTitle.attr('href', 'http://tylerslist.elasticbeanstalk.com');
-				$projectPicLeft.children('a').attr('href', 'http://tylerslist.elasticbeanstalk.com');
-				$projectPicLeft.fadeIn(1000);
-				$headerCenter.css('float', 'right');
-			});	
-		}
-	})
+			}
 
-	$('.home').on('click touch', function () {	
-		if ($projectPicLeft.css('display') === 'block') {
-			typeOver($headerContent, homeDescription);
-			typeOver($headerTitle, homeTitle);
-			$projectPicLeft.fadeOut(1000, function () {
-				$headerCenter.css('float', '');
-			});
-		}
+			if ($projectPicRight.css('display') === 'block') {
+				typeOver($headerContent, homeDescription);
+				typeOver($headerTitle, homeTitle);
+				$projectPicRight.fadeOut(1000, function () {
+					$headerCenter.css('float', '');
+				});
+			}
+			$headerTitle.attr('href', '');
+		})	
 
-		if ($projectPicRight.css('display') === 'block') {
-			typeOver($headerContent, homeDescription);
-			typeOver($headerTitle, homeTitle);
-			$projectPicRight.fadeOut(1000, function () {
-				$headerCenter.css('float', '');
-			});
-		}
-		$headerTitle.attr('href', '');
-	})	
+		$('.gofish').on('click', function () {	
+			typeOver($headerContent, goFishDescription);
+			typeOver($headerTitle, goFishTitle);
 
-	$('.gofish').on('click touch', function () {	
-		typeOver($headerContent, goFishDescription);
-		typeOver($headerTitle, goFishTitle);
-
-		if ($projectPicLeft.css('display') === 'block') {
-			$projectPicLeft.fadeOut(1000, function () {
+			if ($projectPicLeft.css('display') === 'block') {
+				$projectPicLeft.fadeOut(1000, function () {
+					$projectPicRight.fadeOut(1000, function () {
+						if ($projectPicRight.children('a').children('img').hasClass('chessPic')) {
+							$projectPicRight.children('a').children('img').removeClass('chessPic');
+						}
+						$projectPicRight.children('a').children('img').attr('src', '/goFishScreen.jpeg');
+						$headerTitle.attr('href', '/goFish/');
+						$projectPicRight.children('a').attr('href', '/goFish/');
+						$projectPicRight.fadeIn(1000);
+						$headerCenter.css('float', 'left');
+					});
+				})
+			}
+			else {
 				$projectPicRight.fadeOut(1000, function () {
 					if ($projectPicRight.children('a').children('img').hasClass('chessPic')) {
 						$projectPicRight.children('a').children('img').removeClass('chessPic');
@@ -100,28 +153,26 @@ $(document).ready(function() {
 					$projectPicRight.children('a').attr('href', '/goFish/');
 					$projectPicRight.fadeIn(1000);
 					$headerCenter.css('float', 'left');
-				});
-			})
-		}
-		else {
-			$projectPicRight.fadeOut(1000, function () {
-				if ($projectPicRight.children('a').children('img').hasClass('chessPic')) {
-					$projectPicRight.children('a').children('img').removeClass('chessPic');
-				}
-				$projectPicRight.children('a').children('img').attr('src', '/goFishScreen.jpeg');
-				$headerTitle.attr('href', '/goFish/');
-				$projectPicRight.children('a').attr('href', '/goFish/');
-				$projectPicRight.fadeIn(1000);
-				$headerCenter.css('float', 'left');
-			});	
-		}
-	})
+				});	
+			}
+		})
 
-	$('.chess').on('click touch', function () {	
-		typeOver($headerContent, chessDescription);
-		typeOver($headerTitle, chessTitle);
-		if ($projectPicLeft.css('display') === 'block') {
-			$projectPicLeft.fadeOut(1000, function () {
+		$('.chess').on('click', function () {	
+			typeOver($headerContent, chessDescription);
+			typeOver($headerTitle, chessTitle);
+			if ($projectPicLeft.css('display') === 'block') {
+				$projectPicLeft.fadeOut(1000, function () {
+					$projectPicRight.fadeOut(1000, function () {
+						$projectPicRight.children('a').children('img').attr('src', '/chessPic.jpg');
+						$headerTitle.attr('href', 'https://github.com/tylerprobst/Chess');
+						$projectPicRight.children('a').attr('href', 'https://github.com/tylerprobst/Chess');
+						$projectPicRight.children('a').children('img').addClass('chessPic');
+						$projectPicRight.fadeIn(1000);
+						$headerCenter.css('float', 'left');
+					});
+				})
+			}
+			else {
 				$projectPicRight.fadeOut(1000, function () {
 					$projectPicRight.children('a').children('img').attr('src', '/chessPic.jpg');
 					$headerTitle.attr('href', 'https://github.com/tylerprobst/Chess');
@@ -129,20 +180,10 @@ $(document).ready(function() {
 					$projectPicRight.children('a').children('img').addClass('chessPic');
 					$projectPicRight.fadeIn(1000);
 					$headerCenter.css('float', 'left');
-				});
-			})
-		}
-		else {
-			$projectPicRight.fadeOut(1000, function () {
-				$projectPicRight.children('a').children('img').attr('src', '/chessPic.jpg');
-				$headerTitle.attr('href', 'https://github.com/tylerprobst/Chess');
-				$projectPicRight.children('a').attr('href', 'https://github.com/tylerprobst/Chess');
-				$projectPicRight.children('a').children('img').addClass('chessPic');
-				$projectPicRight.fadeIn(1000);
-				$headerCenter.css('float', 'left');
-			});	
-		}
-	})
+				});	
+			}
+		})
+	}
 
 	$('#resume').hover(function () {
 		$('#resume').css({fontSize: '25px'});
@@ -167,7 +208,6 @@ $(document).ready(function() {
 	}, function () {
 		$('#linkedin').css({fontSize: '25px', padding: '50px'});
 	})	
-
 		 
 });
 

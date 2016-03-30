@@ -167,6 +167,8 @@ a, a:hover {
    #header-center { 
    		font-size: 3vw;
    		width: 75%; 
+   		overflow: hidden;
+   		height: 789px;
    }
 
    #mobile-navbar {
@@ -180,9 +182,25 @@ a, a:hover {
    	color: white;
    	padding: .5em;
    	margin: .2em;
-   	background: linear-gradient(#a6a6a6, #737373);
-   	border: white solid;
+   	background: linear-gradient(#737373, #333333);
+   	border: #999999 solid;
    	border-radius: .5em;
+   	height: 100px;
+   	overflow: hidden;
+   }
+
+   .mobile-project-pic {
+   	position: relative;
+   	height: 300px;
+   	top: 15px;
+   }
+
+   #mobile-pic-tylerslist {
+   	height: 200px;
+   }
+
+   #mobile-pic-chess {
+   	height: 350px;
    }
 
    #navbar {
@@ -190,9 +208,9 @@ a, a:hover {
    }
 
    #resume, #email {
-   		line-height: 1.5;
-   		font-size: 3vw;
-   		margin: auto;
+   	line-height: 1.5;
+   	font-size: 3vw;
+   	margin: auto;
    }
 
    .ffa-link, #title {
