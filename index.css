@@ -1,7 +1,6 @@
 a, a:hover {
 	color: white;
 }
-
 #background {
 	height: 100%;
 	width: 100%;
@@ -163,6 +162,16 @@ a, a:hover {
 }
 
 @media screen and (max-device-width: 768px) {
+
+	#background {
+		height: 110%;
+		width: 110%;
+		position: fixed;
+		background-image: url('background.jpg');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
    #header-center { 
    		font-size: 3vw;
