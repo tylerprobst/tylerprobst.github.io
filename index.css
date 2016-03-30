@@ -169,6 +169,7 @@ a, a:hover {
    		width: 75%; 
    		overflow: hidden;
    		height: 789px;
+   		font-weight: bold;
    }
 
    #mobile-navbar {
