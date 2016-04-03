@@ -5,6 +5,10 @@ $(document).ready(function() {
 		$background      = $('#background'),
 		$projectPicLeft  = $('#project-pic-left'),
 		$projectPicRight = $('#project-pic-right'),
+		$chess           = $('.chess'),
+		$gofish          = $('.gofish'),
+		$tylerslist      = $('.tylerslist'),
+		$photogrammatron = $('.photogrammatron'),
 		homeDescription            = $('#home-description').text(),
 		homeTitle                  = $('#home-title').text(),
 		photogrammatronDescription = $('#photogrammatron-description').text(),
@@ -19,39 +23,19 @@ $(document).ready(function() {
 	//responsive
 	if ($('#mobile-navbar').css('display') === 'table') {
 		$('.home').on('click touch', function () {
-			$('.gofish').animate({height: '100px'});
-			$('.chess').animate({height: '100px'});
-			$('.tylerslist').animate({height: '100px'});
-			$('.photogrammatron').animate({height: '100px'});
-			$headerCenter.animate({height: '789px'});
+			$(this).mobileMenuControl();
 		})
 		$('.photogrammatron').on('click touch', function () {
-			$('.gofish').animate({height: '100px'});
-			$('.chess').animate({height: '100px'});
-			$('.tylerslist').animate({height: '100px'});
-			$headerCenter.animate({height: '0px'});
-			$('.photogrammatron').animate({height: '1050px'});
+			$(this).mobileMenuControl();
 		});	
 		$('.tylerslist').on('click touch', function () {
-			$('.gofish').animate({height: '100px'});
-			$('.photogrammatron').animate({height: '100px'});
-			$('.chess').animate({height: '100px'});
-			$headerCenter.animate({height: '0px'});
-			$('.tylerslist').animate({height: '850px'});
+			$(this).mobileMenuControl();
 		});	
 		$('.gofish').on('click touch', function () {
-			$('.chess').animate({height: '100px'});
-			$('.photogrammatron').animate({height: '100px'});
-			$('.tylerslist').animate({height: '100px'});
-			$headerCenter.animate({height: '0px'});
-			$('.gofish').animate({height: '1075px'});
+			$(this).mobileMenuControl();
 		});	
 		$('.chess').on('click touch', function () {
-			$('.gofish').animate({height: '100px'});
-			$('.photogrammatron').animate({height: '100px'});
-			$('.tylerslist').animate({height: '100px'});
-			$headerCenter.animate({height: '0px'});
-			$('.chess').animate({height: '950px'});
+			$(this).mobileMenuControl();
 		});
 	}
 	//full-screen
@@ -210,6 +194,48 @@ $(document).ready(function() {
 	})	
 		 
 });
+
+$.fn.mobileMenuControl = function (active) {
+	var $this = $(this),
+		activeId = $this.attr('id'),
+		prevActive = $('.active').attr('id'),
+		expandedHeights = {
+			home: '789px',
+			photogrammatron: '1075px',
+			tylerslist: '850px',
+			gofish: '1075px',
+			chess: '950px'
+		},
+		collapsedHeights = {
+			home: '0px',
+			photogrammatron: '100px',
+			tylerslist: '100px',
+			gofish: '100px',
+			chess: '100px'
+		};
+
+		
+	if ($this.hasClass('active')) {
+		return null
+	}
+	else {
+		if ($('.active').attr('id') === 'home') $('#header-center').animate({height: collapsedHeights[prevActive]});
+
+		else $('.active').animate({height: collapsedHeights[prevActive]});	
+
+		$('.active').removeClass('active'); //removes previously active class
+		
+		if ($this.attr('id') === 'home') $('#home').addClass('active');
+		
+		else $this.addClass('active');
+
+		if ($this.attr('id') === 'home') {
+			$this = $('#header-center');
+		}
+		$this.animate({height: expandedHeights[activeId]});
+	}
+
+}
 
 function typeOver($el, string) {
 	var source = $el.text(),
