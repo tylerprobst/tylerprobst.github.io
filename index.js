@@ -219,9 +219,9 @@ $.fn.mobileMenuControl = function (active) {
 		return null
 	}
 	else {
-		if ($('.active').attr('id') === 'home') $('#header-center').animate({height: collapsedHeights[prevActive]});
+		if ($('.active').attr('id') === 'home') $('#header-center').velocity({height: collapsedHeights[prevActive]});
 
-		else $('.active').animate({height: collapsedHeights[prevActive]});	
+		else $('.active').velocity({height: collapsedHeights[prevActive]});	
 
 		$('.active').removeClass('active'); //removes previously active class
 		
@@ -232,7 +232,7 @@ $.fn.mobileMenuControl = function (active) {
 		if ($this.attr('id') === 'home') {
 			$this = $('#header-center');
 		}
-		$this.animate({height: expandedHeights[activeId]});
+		$this.velocity({height: expandedHeights[activeId]});
 	}
 
 }
