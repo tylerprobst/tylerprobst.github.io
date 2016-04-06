@@ -163,6 +163,24 @@ a, a:hover {
 
 @media screen and (max-device-width: 768px) {
 
+	/*active classes*/
+	.home-active { 
+		height: 789px !important;
+	}
+	.photogrammatron-active {
+		height: 1075px !important;
+	}
+	.tylerslist-active {
+		height: 850px !important;
+	}
+	.gofish-active {
+		height: 1075px !important;
+	}
+	.chess-active {
+		height: 950px !important;
+	}
+	/*active classes*/
+
 	#background {
 		height: 110%;
 		width: 110%;
@@ -174,11 +192,20 @@ a, a:hover {
 	}
 
    #header-center { 
+   		position: relative;
    		font-size: 3vw;
    		width: 75%; 
    		overflow: hidden;
    		height: 789px;
    		font-weight: bold;
+   		-webkit-transition: height .75s ease;
+    	-moz-transition: height .75s ease;
+    	-o-transition: height .75s ease;
+    	transition: height .75s ease;
+   }
+
+   .home-collapsed {
+   		height: 0px !important;
    }
 
    #mobile-navbar {
@@ -189,6 +216,7 @@ a, a:hover {
    }
 
    .mobile-nav-bar-icon {
+   	position: relative;
    	color: white;
    	padding: .5em;
    	margin: .2em;
@@ -197,6 +225,10 @@ a, a:hover {
    	border-radius: .5em;
    	height: 100px;
    	overflow: hidden;
+   	-webkit-transition: height .75s ease;
+    -moz-transition: height .75s ease;
+    -o-transition: height .75s ease;
+    transition: height .75s ease;
    }
 
    .mobile-project-pic {

@@ -214,27 +214,20 @@ $.fn.mobileMenuControl = function (active) {
 			chess: '100px'
 		};
 
-		
-	if ($this.hasClass('active')) {
-		return null
-	}
+	if ($this.hasClass('active')) return null;
+	
 	else {
-		if ($('.active').attr('id') === 'home') $('#header-center').velocity({height: collapsedHeights[prevActive]});
+		if ($('.active').attr('id') === 'home') $('#header-center').addClass('home-collapsed');
+		$('.active').removeClass(prevActive + '-active').removeClass('active');
 
-		else $('.active').velocity({height: collapsedHeights[prevActive]});	
+		$this.addClass('active');
+		if ($this.hasClass('home')) $('#header-center').removeClass('home-collapsed').addClass('home-active');
+		else if ($this.hasClass('photogrammatron')) $this.addClass('photogrammatron-active');
+		else if ($this.hasClass('tylerslist')) $this.addClass('tylerslist-active');
+		else if ($this.hasClass('gofish')) $this.addClass('gofish-active');
+		else if ($this.hasClass('chess')) $this.addClass('chess-active');
 
-		$('.active').removeClass('active'); //removes previously active class
-		
-		if ($this.attr('id') === 'home') $('#home').addClass('active');
-		
-		else $this.addClass('active');
-
-		if ($this.attr('id') === 'home') {
-			$this = $('#header-center');
-		}
-		$this.velocity({height: expandedHeights[activeId]});
-	}
-
+	}	
 }
 
 function typeOver($el, string) {
