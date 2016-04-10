@@ -5,7 +5,7 @@ a, a:hover {
 	height: 100%;
 	width: 100%;
 	position: fixed;
-	background-image: url('background.jpg');
+	background-image: url('background1.jpg');
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -185,7 +185,7 @@ a, a:hover {
 		height: 110%;
 		width: 110%;
 		position: fixed;
-		background-image: url('background.jpg');
+		background-image: url('background1.jpg');
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
