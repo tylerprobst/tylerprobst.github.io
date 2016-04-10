@@ -231,6 +231,11 @@ a, a:hover {
     transition: height .75s ease;
    }
 
+   .mobile-nav-bar-icon:active {
+   	border: black solid;
+   	color: black;
+   }
+
    .mobile-project-pic {
    	position: relative;
    	height: 300px;
