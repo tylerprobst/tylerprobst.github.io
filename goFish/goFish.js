@@ -1,11 +1,3 @@
-
-//Make death metal gofish interface with looping death metal backround music **pinky**
-
-//make it to where players cannot select themselves
-//find a way to make an actual pile of cards in the middle instead of them lined up so nicely
-
-
-
 var goFish = (function () {
 
 	var Game = function (deck) {

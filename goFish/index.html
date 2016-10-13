@@ -13,6 +13,7 @@
 	<body>
 		<div class="jumbotron">
 			<div class="row">
+				<div class="fishbowl" id="fishbowl">FishBowl</div>
 				<div class="col-xs-6">
 					<div id="game-log"></div>
 				</div>
@@ -23,32 +24,35 @@
 					<div id="messages"></div>
 					<div id="instruction"></div>
 				</div>
+				<button id="start" class="btn btn-success">Start!</button>
 			</div>
 		</div>
+		
 		<div class="row">
-			<div class="col-xs-4" id="player1">	
-				<div class="player"><img src="goFish1.jpeg" class="player" player-idx="0"></div>
+			<div class="col-xs-4 col-xs-push-4 player" id="player1">	
+				<div class="player-img"><img src="goFish1.jpeg" player-idx="0"></div>
 					<div class="cards" id="my-cards"></div>
 					<p> Books:<div class="col-xs-4" id="books"></div></p>
 			</div>
+		</div>
+		<div class="row">	
+			<div class="col-xs-4 player" id="player2">
+				<div class="player-img"><img src="goFish2.jpeg" player-idx="1"></div>
+				<div class="cards" id="two-cards"></div>
+			</div>
 			<div class="col-xs-4">
-				<div class="fishbowl" id="fishbowl"></div>
-				<button id="start" class="btn btn-success">Start!</button>
 			</div>
-			<div class="col-xs-4" id="cpu-players">	
-				<div id="player2">
-					<div class="player"><img src="goFish2.jpeg" class="player" player-idx="1"></div>
-					<div class="cards" id="two-cards"></div>
-				</div>
-				<div id="player3">
-					<div class="player"><img src="goFish3.jpeg" class="player" player-idx="2"></div>
-					<div class="cards" id="three-cards"></div>
-				</div>
-				<div id="player4">
-					<div class="player"><img src="goFish4.jpeg" class="player" player-idx="3"></div>
-					<div class="cards" id="four-cards"></div>
-				</div>
+			<div class="col-xs-4 player" id="player3">
+				<div class="player-img"><img src="goFish3.jpeg" player-idx="2"></div>
+				<div class="cards" id="three-cards"></div>
 			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-xs-push-4 player" id="player4">
+				<div class="player-img"><img src="goFish4.jpeg" player-idx="3"></div>
+				<div class="cards" id="four-cards"></div>
+			</div>
+		</div>
 		</div>
 	</body>
 </html>

@@ -1,13 +1,3 @@
-/*HW: write surrogate helper method to setup up and inheritance between a parent and child class 
-if card is between 2-10 make it an instance of the card class if 1 or 11-13 make instance of the facecard class
-first project will be a go-fish game:
-				5 cards drawn 
-				3 computer players that ask for cards
-				deck to draw from 
-				look up go fish rules!
- */ 
-
-
 var deckjs = (function () {
 	var suits = {
 			'hearts'  : '1f0b',
